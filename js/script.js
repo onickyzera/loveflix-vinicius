@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (revealBtn && pedido && pedidoText) {
     revealBtn.addEventListener("click", () => {
       pedido.classList.remove("hidden");
+
+// Rola suavemente até a seção
+pedido.scrollIntoView({ behavior: 'smooth' });
       let texto = "Então... depois de tudo isso... 💭\nOlhe para o lado...";
       let i = 0;
       pedidoText.innerHTML = "";
