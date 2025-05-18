@@ -17,26 +17,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const pedidoText = document.getElementById("pedidoText");
 
   if (revealBtn && pedido && pedidoText) {
-    revealBtn.addEventListener("click", () => {
-      pedido.classList.remove("hidden");
+  revealBtn.addEventListener("click", () => {
+    // Mostra a seção
+    pedido.classList.remove("hidden");
 
-// Rola suavemente até a seção
-pedido.scrollIntoView({ behavior: 'smooth' });
-      let texto = "Então... depois de tudo isso... 💭\nOlhe para o lado...";
-      let i = 0;
-      pedidoText.innerHTML = "";
+    // Força o navegador a redesenhar antes de rolar
+    setTimeout(() => {
+      pedido.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
 
-      function digitar() {
-        if (i < texto.length) {
-          pedidoText.innerHTML += texto.charAt(i);
-          i++;
-          setTimeout(digitar, 80);
-        }
+    // Começa o texto com efeito de digitação
+    let texto = "Então... depois de tudo isso... 💭\nQuer namorar comigo?";
+    let i = 0;
+    pedidoText.innerHTML = "";
+
+    function digitar() {
+      if (i < texto.length) {
+        pedidoText.innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(digitar, 80);
       }
+    }
 
-      digitar();
-    });
-  }
+    digitar();
+  });
+}
 
   // VÍDEO
   const playBtn = document.querySelector('.btn-play');
