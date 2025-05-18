@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loveflix - Isabéle & Vinicius</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Tela Inicial -->
+  <div id="intro" class="tela lilas">
+    <div class="foto-wrapper">
+      <img src="/images/foto button.jpg" alt="Casal" class="foto-cheia">
+      <button id="startBtn">Clique para começar</button>
+    </div>
+  </div>
+
+  <!-- Página Principal -->
+  <div id="mainContent" class="tela dark hidden">
+    <header class="topbar">
+      <div class="logo">LOVEFLIX</div>
+      <nav>
+        <ul>
+          <li>Início</li>
+          <li>Séries</li>
+          <li>Minha Lista</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="conteudo">
+      <section class="netflix-hero">
+        <span class="n-serie">N SÉRIE</span>
+        <h1 class="casal-title">Isabéle & Vinicius</h1>
+
+        <div class="meta">
+          <span>📅 20 DE MAIO</span>
+          <span>1 TEMPORADA</span>
+          <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <p class="descricao">
+          Nosso amor não é um conto de fadas, é um amor real. Às vezes intenso, às vezes calmo, mas sempre cheio de significados.
+          Nosso amor é feito de olhares, sorrisos e de cada momento juntos.
+        </p>
+
+        <div class="botoes">
+          <button class="btn-play">▶ Continuar</button>
+          <button class="btn-fav">♡ Favorito</button>
+        </div>
+      </section>
+
+      <!-- Modal do vídeo (fica escondido) -->
+<div id="videoModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <video id="videoPlayer" controls>
+      <source src="/images/Vídeo do WhatsApp de 2025-05-17 à(s) 13.07.28_1f6193c5.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo HTML5.
+    </video>
+  </div>
+</div>
+
+
+      <section class="momentos">
+        <h3>Nossos Melhores Momentos</h3>
+        <div class="galeria">
+          <img src="/images/foto (1).jpg" alt="Foto 1" />
+          <img src="/images/foto (2).jpg" alt="Foto 2" />
+          <img src="/images/foto (3).jpg" alt="Foto 1" />
+          <img src="/images/foto (4).jpg" alt="Foto 2" />
+          <img src="/images/foto (5).jpg" alt="Foto 3" />
+          <img src="/images/foto (6).jpg" alt="Foto 3" />
+        </div>
+        <div id="fotoModal" class="modal hidden">
+  <span id="fecharModal" class="close">&times;</span>
+  <img class="modal-img" id="imagemExpandida" src="" alt="Imagem ampliada" />
+</div>
+      </section>
+
+      <section class="botao-final">
+  <button id="revealBtn">💌 Ver algo especial</button>
+</section>
+
+      <section id="pedido" class="hidden">
+        <p class="typing" id="pedidoText"></p>
+        <div class="heart"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
