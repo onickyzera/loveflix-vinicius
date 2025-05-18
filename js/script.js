@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
 
     // Começa o texto com efeito de digitação
-    let texto = "Então... depois de tudo isso... 💭\nQuer namorar comigo?";
+    let texto = "Então... depois de tudo isso... 💭\nOlhe para o lado...";
     let i = 0;
     pedidoText.innerHTML = "";
 
